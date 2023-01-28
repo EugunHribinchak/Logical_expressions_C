@@ -1,0 +1,27 @@
+using System;
+//Перевірити істинність вислову: "Дане ціле число є парним двозначним числом".
+namespace Ex_5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a;
+
+            Console.WriteLine("Enter number");
+            str = Console.ReadLine();
+            a = Convert.ToInt32(str);
+            if (a%2 == 0 && a>=10 && a<100)
+            {
+                Console.WriteLine("Двухзначное парное число ");
+            }
+            
+            else
+            {
+                Console.WriteLine("Не парное или не двухзначное");
+            }
+            Console.WriteLine(a % 2);
+        }
+    }
+}
