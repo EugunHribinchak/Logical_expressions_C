@@ -1,0 +1,35 @@
+using System;
+//Перевірити істинність вислову: "Цифри даного тризначного числа утворюють арифметичну прогресію"
+namespace Ex_15
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a,b,c,d;
+            do
+            {
+                Console.WriteLine("Введите трехзначное число");
+                str = Console.ReadLine();
+                a = int.Parse(str);
+            } while (a<100 || a>999);
+
+            b = a % 10;
+            a = a / 10;
+            c = a % 10;
+            a = a / 10;
+
+            d = c - a;
+
+            if (c-a==d && b-c==d)
+            {
+                Console.WriteLine("Цифри даного тризначного числа утворюють арифметичну прогресiю");
+            }
+            else
+            {
+                Console.WriteLine("Цифри даного тризначного числа НЕ утворюють арифметичну прогресiю");
+            }
+        }
+    }
+}
