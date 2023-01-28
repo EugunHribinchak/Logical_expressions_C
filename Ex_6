@@ -1,0 +1,26 @@
+using System;
+//Перевірити істинність вислову: "Дане ціле число є непарним тризначним числом". 
+namespace Ex_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a;
+
+            Console.WriteLine("Enter number");
+            str = Console.ReadLine();
+            a = Convert.ToInt32(str);
+
+            if (a % 2 != 0 && a>=100 && a<1000)
+            {
+                Console.WriteLine("Не парное трехзначное число");
+            }
+            else
+            {
+                Console.WriteLine("Парное или не трехзначное число");
+            }
+        }
+    }
+}
