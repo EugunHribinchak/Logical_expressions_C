@@ -1,0 +1,41 @@
+using System;
+//Перевірити істинність вислову: "Сума двох перших цифр даного чотиризначного числа рівна сумі двох його останніх цифр". 
+namespace Ex_10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a,b,c,d, s1,s2;
+            do
+            {
+                Console.WriteLine("Введите четырехзначное число");
+                str = Console.ReadLine();
+                a = Convert.ToInt32(str);
+            } while (a<999 || a>9999);
+
+            d = a % 10;
+            a = a / 10;
+            c = a % 10;
+            a = a / 10;
+            b = a % 10;
+            a = a / 10;
+
+            Console.WriteLine("Наши цыфры "+d+" "+ c + " " + b + " " + a);
+            s1 = a + b;
+            s2 = d + c;
+            Console.WriteLine("Сумма первых двух= "+s1+" Сума последних двух= "+s2);
+
+            if (s1==s2)
+            {
+                Console.WriteLine("Сумма первых двух равна суме последних двух");
+            }
+            else
+            {
+                Console.WriteLine("Сумма не равна друг другу");
+            }
+
+        }
+    }
+}
