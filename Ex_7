@@ -1,0 +1,32 @@
+using System;
+//Перевірити істинність вислову: "Серед трьох даних цілих чисел є хоч би одна пара співпадаючих".
+
+namespace Ex_7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a, b, c;
+            Console.WriteLine("Введите число 1");
+            str = Console.ReadLine();
+            a = Convert.ToInt32(str);
+            Console.WriteLine("Введите число 2");
+            str = Console.ReadLine();
+            b = Convert.ToInt32(str);
+            Console.WriteLine("Введите число 3");
+            str = Console.ReadLine();
+            c = Convert.ToInt32(str);
+
+            if (a==b || a==c || b==c)
+            {
+                Console.WriteLine("Есть пара совпадающих");
+            }
+            else
+            {
+                Console.WriteLine("Нету пары совпадающих чисел");
+            }
+        }
+    }
+}
