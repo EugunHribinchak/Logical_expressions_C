@@ -1,0 +1,39 @@
+using System;
+//Перевірити істинність вислову: "Квадратне рівняння A·x2 + B·x + C = 0 із даними коефіцієнтами A, B, C має дійсні корені".
+namespace Lab_1_sem1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int A, B, C,D;
+
+            Console.WriteLine("Введите чисило 1");
+            str = Console.ReadLine();
+            A = Convert.ToInt32(str);
+            Console.WriteLine("Введите чисило 2");
+            str = Console.ReadLine();
+            B = Convert.ToInt32(str);
+            Console.WriteLine("Введите чисило 3");
+            str = Console.ReadLine();
+            C = Convert.ToInt32(str);
+
+            D = B ^ 2 - 4 * A * C;
+            if (D > 0)
+            {
+                Console.WriteLine("Два действительных корня");
+            }
+            else if (D == 0)
+            {
+                Console.WriteLine("Один действительный корень");
+            }
+            else
+            {
+                Console.WriteLine("Нет действительных корней");
+            }
+
+            Console.WriteLine(D);
+        }
+    }
+}
