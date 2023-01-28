@@ -1,0 +1,36 @@
+using System;
+//Перевірити істинність вислову: "Дане чотиризначне число читається однаково зліва направо і справа наліво".
+namespace Ex_11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a,b,c,d;
+            do
+            {
+                Console.WriteLine("Введите четырехзначное число ");
+                str = Console.ReadLine();
+                a = Convert.ToInt32(str);
+            } while (a<1000 || a > 9999);
+
+            b = a % 10;
+            a = a / 10;
+            c = a % 10;
+            a = a / 10;
+            d = a % 10;
+            a = a / 10;
+
+            if (a==b && c==d )
+            {
+                Console.WriteLine("Данное число читаеться одинаково слева на право и с право на лево");
+            }
+            else
+            {
+                Console.WriteLine("Данное число НЕ читаеться одинаково слева на право и с право на лево");
+            }
+            
+        }
+    }
+}
