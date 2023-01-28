@@ -1,0 +1,35 @@
+using System;
+//Перевірити істинність вислову: "Цифри даного тризначного числа утворюють зростаючу послідовність".
+namespace Ex_13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            int a,b,c;
+
+            do
+            {
+                Console.WriteLine("Введите трехзначное число");
+                str = Console.ReadLine();
+                a = Convert.ToInt32(str);
+
+            } while (a<100||a>999);
+
+            b = a % 10;
+            a = a / 10;
+            c = a % 10;
+            a = a / 10;
+
+            if (a<c && a<b && c<b)
+            {
+                Console.WriteLine("Данное трехзначное чило имеет возростающую последовательность");
+            }
+            else
+            {
+                Console.WriteLine("Данное трехзначное чило НЕ имеет возростающую последовательность");
+            }
+        }
+    }
+}
